@@ -1,0 +1,13 @@
+
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+			//do something
+		} else {
+		
+            //do something for others
+        }
+
+        if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && $_SESSION['is_admin']  === true) {
+			redirect('/yonetim/GMEkle');
+		} else {
+			redirect('/user/login');
+		}
